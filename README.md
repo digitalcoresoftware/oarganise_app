@@ -69,9 +69,10 @@ The website will be the entry point for **oargainse** with the URL being: www.oa
 potential clients all the info needed about the app in order for them to sign up. The following outlines the structure 
 of the website:
 
-| Section | Page     | URL         |
-|---------|----------|-------------|
-| Main    | Landing  | `/`         |
+| Section | Page          | URL     |
+|---------|---------------|---------|
+| Main    | Splash Screen | `/`     |
+| Main    | Landing       | `/home` |
 
 ### The Landing Page
 The landing page is key for any SaaS application as it is responsible for getting the client to sign up. While 
@@ -117,5 +118,12 @@ I am using this design [post](https://www.instagram.com/p/CoH7_oqO-8h/) for insp
 | Integrations    | Show the suite of tools that oarganise works with; google calendar etc...                    |
 | Footer          | Breakdown of site links and links to socials; linkedIn, instagram etc...                     |
 
+#### Navigation
+The navigation element (header) will be the first element loaded on to the landing page. It should have the following
+elements: A logo that links to `/home` (so the splash screen isn't shown everytime), links that are split into 2 
+categories - the first will be shown in the header and when hovered over, the second category of links will be 
+displayed, and they will link to the actual content. The final element will be 2 CTA buttons. The first will be a 
+download button (I aim to extend this app to a downloadable desktop app in the future) and an open app button that will
+direct the user to the URL: www.app.oargainse.com
 
 ## Web App
