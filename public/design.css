@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/* Imports */
+
+/* Vars */
+:root {
+  /* Palette */
+  --main-pal-1: #345ea8;
+  --main-pal-2: #5679b7;
+  --main-pal-3: #7894c6;
+  --main-pal-4: #244376;
+
+  --primary-col: #f9faff;
+  --second-col: #ffffff;
+  --tertiary-col: #f4f6fc;
+  --font-col: #0a0a0a;
+  --sub-font-col: #c6c6c6;
+
+  /* Font */
+  --logo-font: "Comfortaa", cursive;
+  --tagline-font: "Suisse Intl", sans-serif;
+  --heading-font: "Bebas Neue", cursive;
+  --para-font: "Montserrat", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Palette */
+    --main-pal-1: #2c55a0;
+    --main-pal-2: #4a69b1;
+    --main-pal-3: #637dc0;
+    --main-pal-4: #1c366d;
+
+    --primary-col: #18191b;
+    --second-col: #212224;
+    --tertiary-col: #3e3f41;
+    --font-col: #d6d7d9;
+    --sub-font-col: #797b7c;
+  }
+}
+
+/* Defaults */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: var(--para-font);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: left;
+  background-color: var(--primary-col);
+  color: var(--font-col);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li {
+  margin: auto;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+video,
+svg,
+canvas {
+  display: block;
+}
+
+ul {
+  margin-block: 5px;
+  padding-inline-start: 30px;
+}
