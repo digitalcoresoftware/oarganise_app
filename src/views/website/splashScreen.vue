@@ -1,10 +1,12 @@
 <template>
-  <div class="splash__wrapper">
-    <div class="splash__content center__screen">
-      <div class="water__container">
-        <div :class="{ fill: showWave }" class="wave" />
-
-        <splash-logo class="splash__logo" />
+  <div class="section">
+    <div class="splash__wrapper">
+      <div class="splash__content center__screen">
+        <div class="logo__mask">
+          <div class="water__container">
+            <div :class="{ fill: showWave }" class="wave" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -17,13 +19,10 @@ import { useRouter } from "vue-router";
 import $ from "jquery";
 
 // Components
-import SplashLogo from "@/assets/svgs/splashScreen/splashLogo.vue";
 
 export default {
   name: "splashScreen",
-  components: {
-    SplashLogo,
-  },
+  components: {},
   data() {
     return {
       showWave: false,
@@ -47,23 +46,22 @@ export default {
     const router = useRouter();
     setTimeout(() => {
       router.push("/home");
-    }, 4000);
+    }, 3500);
   },
 };
 </script>
 
 <style scoped>
 /* Vars */
-.splash__content {
-  --wave-w: 400px;
+.section {
+  --mask-w: 300px;
+  --wave-size: 400px;
   --wave-col: #345ea8;
 }
 
-@media (prefers-color-scheme: dark) {
-  .splash__content {
-    --wave-w: 400px;
-    --wave-col: #d6d7d9;
-  }
+.splash__content {
+  width: var(--mask-w);
+  height: 45px;
 }
 
 .splash__wrapper {
@@ -74,7 +72,8 @@ export default {
 
 .water__container {
   position: relative;
-  width: 350px;
+  width: var(--mask-w);
+  height: 45px;
   background-color: var(--second-col);
   overflow: hidden;
   -webkit-backface-visibility: hidden;
@@ -84,20 +83,32 @@ export default {
   cursor: pointer;
 }
 
+.logo__mask {
+  -webkit-mask-image: url("~@/assets/svgs/logo/oarganise-logo.svg");
+  mask-image: url("~@/assets/svgs/logo/oarganise-logo.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
 .wave {
   background-color: var(--wave-col);
   position: absolute;
   z-index: 0;
   top: 200%;
-  height: calc(var(--wave-w) * 2);
-  width: calc(var(--wave-w) * 2);
+  height: calc(var(--wave-size) * 2);
+  width: calc(var(--wave-size) * 2);
   border-radius: 38%;
   left: -50%;
   transform: rotate(360deg);
   transition: all 5s ease;
-  animation: wave 30s linear infinite;
+  animation: wave 25s linear infinite;
 }
 
+.wave.fill {
+  top: -200px;
+}
+
+/* Animations */
 @keyframes wave {
   0% {
     transform: rotate(0deg);
@@ -107,12 +118,17 @@ export default {
   }
 }
 
-.wave.fill {
-  top: -100px;
+/* Media Queries */
+@media (prefers-color-scheme: dark) {
+  .splash__content {
+    --wave-w: 400px;
+    --wave-col: #d6d7d9;
+  }
 }
 
-.splash__logo {
-  position: relative;
-  z-index: 1;
+@media screen and (max-width: 500px) {
+  .section {
+    --mask-w: 200px;
+  }
 }
 </style>
