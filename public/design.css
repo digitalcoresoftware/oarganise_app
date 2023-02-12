@@ -4,6 +4,10 @@
 
 /* Vars */
 :root {
+  /* App */
+  --vh-offset: 0px;
+  --vh: 1vh;
+
   /* Palette */
   --main-pal-1: #345ea8;
   --main-pal-2: #5679b7;
@@ -108,4 +112,26 @@ canvas {
 ul {
   margin-block: 5px;
   padding-inline-start: 30px;
+}
+
+/* Global */
+.glass__effect {
+  backdrop-filter: blur(5px) saturate(100%);
+  -webkit-backdrop-filter: blur(5px) saturate(100%);
+}
+
+.center__screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.anchor__center {
+  transform: translate(-50%, -50%);
+}
+
+.transition {
+  transition: all 0.1s ease-in-out;
 }
