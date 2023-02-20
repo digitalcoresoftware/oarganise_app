@@ -35,7 +35,6 @@ export default {
 
 .link__opt__txt {
   color: var(--sub-font-col);
-  font-size: var(--details-txt);
   padding-block: 0 5px;
   padding-inline: 10px;
 }

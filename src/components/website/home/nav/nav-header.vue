@@ -41,7 +41,7 @@ export default {
 }
 
 .header__logo {
-  height: 18px;
+  height: 20px;
   fill: var(--logo-col);
 }
 

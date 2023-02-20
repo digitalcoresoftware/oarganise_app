@@ -1,6 +1,6 @@
 <template>
   <div class="header__link__wrapper">
-    <div class="header__link__btn align__middle" id="service__btn">
+    <div class="header__link__btn" id="service__btn">
       <div class="link__wrapper">
         <span>Platform</span>
       </div>
@@ -8,7 +8,7 @@
       <platform-link-opts />
     </div>
 
-    <div class="header__link__btn align__middle" id="company__btn">
+    <div class="header__link__btn" id="company__btn">
       <div class="link__wrapper">
         <span>Company</span>
       </div>
@@ -16,7 +16,7 @@
       <company-link-opts />
     </div>
 
-    <div class="header__link__btn align__middle" id="resources__btn">
+    <div class="header__link__btn" id="resources__btn">
       <div class="link__wrapper">
         <span>Resources</span>
       </div>
