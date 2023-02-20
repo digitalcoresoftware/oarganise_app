@@ -37,16 +37,18 @@ export default {
     vhCheck();
 
     // Show wave animation
-    this.fillLogo();
+    setTimeout(() => {
+      this.fillLogo();
+    }, 500);
 
     // Fade out splash logo
-    $(".splash__content").delay(3000).fadeOut(200);
+    $(".splash__content").delay(3500).fadeOut(200);
 
     // Go Home
     const router = useRouter();
     setTimeout(() => {
       router.push("/home");
-    }, 3500);
+    }, 4000);
   },
 };
 </script>

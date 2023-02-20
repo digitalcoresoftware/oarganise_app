@@ -17,18 +17,27 @@
 </template>
 
 <script>
+import $ from "jquery";
 import OarganiseLogo from "@/assets/svgs/logo/oarganise-logo.vue";
 import NavLinks from "@/components/website/home/nav/nav-links.vue";
 
 export default {
   name: "nav-header",
   components: { NavLinks, OarganiseLogo },
+  mounted() {
+    // Fade in header
+    $(".header__section").fadeIn();
+  },
 };
 </script>
 
 <style scoped>
 .header__section {
+  /* Vars */
   --logo-col: #345ea8;
+
+  /* Design */
+  display: none;
 }
 
 .header__sections {
