@@ -1,12 +1,14 @@
 @charset "UTF-8";
 
 /* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 /* Vars */
 :root {
   /* App */
   --vh-offset: 0px;
   --vh: 1vh;
+  --max-width: 1440px;
 
   /* Palette */
   --main-pal-1: #345ea8;
@@ -14,17 +16,23 @@
   --main-pal-3: #7894c6;
   --main-pal-4: #244376;
 
-  --primary-col: #f9faff;
-  --second-col: #ffffff;
-  --tertiary-col: #f4f6fc;
+  --primary-col: #ffffff;
+  --second-col: #f6f6f6;
   --font-col: #0a0a0a;
-  --sub-font-col: #c6c6c6;
+  --sub-font-col: #0a0a0a7f;
 
   /* Font */
   --logo-font: "Comfortaa", cursive;
-  --tagline-font: "Suisse Intl", sans-serif;
-  --heading-font: "Bebas Neue", cursive;
-  --para-font: "Montserrat", sans-serif;
+  --heading-font: "Suisse Intl", sans-serif;
+  --para-font: "Manrope", sans-serif;
+
+  /* Text Size */
+  --heading-txt: 25px;
+  --page-txt: 20px;
+  --lrg-para-txt: 16px;
+  --para-txt: 14px;
+  --details-txt: 12px;
+  --small-txt: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,8 +45,7 @@
 
     --primary-col: #18191b;
     --second-col: #212224;
-    --tertiary-col: #3e3f41;
-    --font-col: #d6d7d9;
+    --font-col: #f9faff;
     --sub-font-col: #797b7c;
   }
 }
@@ -64,8 +71,6 @@ body {
   font-family: var(--para-font);
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.6;
-  text-align: left;
   background-color: var(--primary-col);
   color: var(--font-col);
 }
@@ -73,6 +78,10 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 li {
@@ -134,4 +143,20 @@ ul {
 
 .transition {
   transition: all 0.1s ease-in-out;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
 }

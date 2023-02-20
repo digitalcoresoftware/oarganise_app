@@ -89,8 +89,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.st0 {
-  fill: #ff7676;
-}
-</style>
+<style scoped></style>
