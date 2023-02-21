@@ -1,6 +1,6 @@
 <template>
   <div class="header__link__wrapper">
-    <div class="header__link__btn" id="service__btn">
+    <div class="header__link__btn" id="service-btn">
       <div class="link__wrapper">
         <span>Platform</span>
       </div>
@@ -8,7 +8,7 @@
       <platform-link-opts />
     </div>
 
-    <div class="header__link__btn" id="company__btn">
+    <div class="header__link__btn" id="company-btn">
       <div class="link__wrapper">
         <span>Company</span>
       </div>
@@ -16,7 +16,7 @@
       <company-link-opts />
     </div>
 
-    <div class="header__link__btn" id="resources__btn">
+    <div class="header__link__btn" id="resources-btn">
       <div class="link__wrapper">
         <span>Resources</span>
       </div>
@@ -40,7 +40,7 @@ export default {
 <style scoped>
 .header__link__wrapper {
   display: grid;
-  grid-template-columns: repeat(3, min-content);
+  grid-template-columns: repeat(3, max-content);
   grid-gap: 5px;
   gap: 5px;
 }
@@ -51,52 +51,52 @@ export default {
   align-items: center;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 
 /* Service Nav Btn */
-#service__btn:hover {
+#service-btn:hover {
   background: var(--second-col);
   border-radius: 25px;
 }
 
-#service__btn:hover > .link__wrapper {
+#service-btn:hover > .link__wrapper {
   color: var(--font-col);
 }
 
-#service__btn:hover > .link__content__container {
+#service-btn:hover > .link__content__container {
   display: block;
 }
 
 /* Company Nav Btn */
-#company__btn:hover {
+#company-btn:hover {
   background: var(--second-col);
   border-radius: 25px;
 }
 
-#company__btn:hover > .link__wrapper {
+#company-btn:hover > .link__wrapper {
   color: var(--font-col);
 }
 
-#company__btn:hover > .link__content__container {
+#company-btn:hover > .link__content__container {
   display: block;
 }
 
 /* Resource Nav Btn */
-#resources__btn:hover {
+#resources-btn:hover {
   background: var(--second-col);
   border-radius: 25px;
 }
 
-#resources__btn:hover > .link__wrapper {
+#resources-btn:hover > .link__wrapper {
   color: var(--font-col);
 }
 
-#resources__btn:hover > .link__content__container {
+#resources-btn:hover > .link__content__container {
   display: block;
 }
 
 .link__wrapper {
-  cursor: pointer;
   color: var(--sub-font-col);
   padding-inline: 15px;
 }

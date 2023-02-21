@@ -10,7 +10,9 @@
           <nav-links />
         </div>
 
-        <div class="section" id="cta-section">3</div>
+        <div class="section" id="cta-section">
+          <nav-cta />
+        </div>
       </div>
     </div>
   </div>
@@ -20,10 +22,11 @@
 import $ from "jquery";
 import OarganiseLogo from "@/assets/svgs/logo/oarganise-logo.vue";
 import NavLinks from "@/components/website/home/nav/nav-links.vue";
+import NavCta from "@/components/website/home/nav/nav-cta.vue";
 
 export default {
   name: "nav-header",
-  components: { NavLinks, OarganiseLogo },
+  components: { NavCta, NavLinks, OarganiseLogo },
   mounted() {
     // Fade in header
     $(".header__section").fadeIn();
