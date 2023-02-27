@@ -27,9 +27,9 @@
 </template>
 
 <script>
-import PlatformLinkOpts from "@/components/website/home/nav/links/platform-link-opts.vue";
-import CompanyLinkOpts from "@/components/website/home/nav/links/company-link-opts.vue";
-import ResourceLinkOpts from "@/components/website/home/nav/links/resource-link-opts.vue";
+import PlatformLinkOpts from "@/components/website/home/nav/links/top-nav/platform-link-opts.vue";
+import CompanyLinkOpts from "@/components/website/home/nav/links/top-nav/company-link-opts.vue";
+import ResourceLinkOpts from "@/components/website/home/nav/links/top-nav/resource-link-opts.vue";
 
 export default {
   name: "nav-links",

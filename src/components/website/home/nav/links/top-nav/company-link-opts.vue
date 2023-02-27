@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import LinkContent from "@/components/website/home/nav/links/link-content.vue";
+import LinkContent from "@/components/website/home/nav/links/top-nav/link-content.vue";
 
 export default {
   name: "company-link-opts",

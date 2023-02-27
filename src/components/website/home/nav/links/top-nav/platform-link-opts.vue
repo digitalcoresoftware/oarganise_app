@@ -2,26 +2,25 @@
   <div class="link__content__container">
     <div class="link__content__wrapper">
       <div class="link__content">
-        <!-- TODO: Add link to blog  -->
-        <router-link to="" class="link__holder">
+        <a href="#club-tools" class="link__holder">
           <link-content
-            link-title="Our Blog"
-            link-txt="Stay up-to-date with all the new and exciting things coming to oarganise and the events we'll be attending."
-          />
-        </router-link>
-
-        <a href="#client-reviews" class="link__holder">
-          <link-content
-            link-title="Client Reviews"
-            link-txt="Our platform will transform your club, don't believe us? Take it from our clients."
+            link-title="Club Management Tools"
+            link-txt="A wide range of tools that allow you to handle everything in your club in the one place."
           />
         </a>
 
-        <!-- TODO: Add link to help  -->
+        <a href="#price-plans" class="link__holder">
+          <link-content
+            link-title="Price Plans"
+            link-txt="Flexible price plans allow a plan that fits your club's needs and no credit card needed when signing up."
+          />
+        </a>
+
+        <!-- TODO: Add link to demo page -->
         <router-link to="" class="link__holder">
           <link-content
-            link-title="Help & FAQs"
-            link-txt="Don't get stranded! Our FAQs page is here to help and you can always contact us by email if that doesn't help."
+            link-title="Try the Demo"
+            link-txt="Don't want to wait? Dive into our demo and use some of the bespoke features oarganise gives to your club."
           />
         </router-link>
       </div>
@@ -30,10 +29,10 @@
 </template>
 
 <script>
-import LinkContent from "@/components/website/home/nav/links/link-content.vue";
+import LinkContent from "@/components/website/home/nav/links/top-nav/link-content.vue";
 
 export default {
-  name: "resource-link-opts",
+  name: "platform-link-opts",
   components: { LinkContent },
 };
 </script>

@@ -62,4 +62,20 @@ export default {
     --logo-col: #f9faff;
   }
 }
+
+@media screen and (max-width: 740px) {
+  .header__sections {
+    grid-template-columns: auto 1fr;
+  }
+
+  #links-section {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__sections {
+    margin-block-start: 10px;
+  }
+}
 </style>

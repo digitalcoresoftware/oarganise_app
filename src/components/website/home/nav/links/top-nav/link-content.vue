@@ -18,13 +18,14 @@ export default {
 <style scoped>
 .link__option {
   margin-block: 5px;
+  margin-inline: 5px;
   text-align: left;
   border-radius: 10px;
 }
 
 .link__option:hover {
   cursor: pointer;
-  opacity: 0.7;
+  background: var(--tertiary-col);
 }
 
 .link__opt__header {

@@ -9,6 +9,7 @@
   --vh-offset: 0px;
   --vh: 1vh;
   --max-width: 1440px;
+  --inline-spacing: 48px;
 
   /* Palette */
   --main-pal-1: #345ea8;
@@ -17,8 +18,9 @@
   --main-pal-4: #244376;
 
   --primary-col: #ffffff;
-  --second-col: #f6f6f6;
-  --font-col: #0a0a0a;
+  --second-col: #f9f9fb;
+  --tertiary-col: #f0f0f5;
+  --font-col: #010101;
   --sub-font-col: #0a0a0a7f;
 
   /* Font */
@@ -45,6 +47,7 @@
 
     --primary-col: #18191b;
     --second-col: #212224;
+    --tertiary-col: #3e3f41;
     --font-col: #f9faff;
     --sub-font-col: #797b7c;
   }
@@ -82,6 +85,11 @@ p {
 
 a {
   text-decoration: none;
+}
+
+button {
+  border: none;
+  padding: 0;
 }
 
 li {
@@ -149,14 +157,11 @@ ul {
   width: 100%;
   max-width: var(--max-width);
   margin-inline: auto;
-  padding-inline: 48px;
+  padding-inline: var(--inline-spacing);
 }
 
-@media screen and (max-width: 500px) {
-  .wrapper {
-    width: 100%;
-    max-width: var(--max-width);
-    margin-inline: auto;
-    padding-inline: 24px;
+@media screen and (max-width: 875px) {
+  :root {
+    --inline-spacing: 24px;
   }
 }
