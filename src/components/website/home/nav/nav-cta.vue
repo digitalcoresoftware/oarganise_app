@@ -74,6 +74,16 @@
           <resource-menu-opts />
         </div>
       </div>
+
+      <div class="menu__cta__container">
+        <router-link to="" class="menu__cta__btn" id="menu-download-cta">
+          <p class="menu__btn__txt">Download</p>
+        </router-link>
+
+        <router-link to="" class="menu__cta__btn" id="menu-open-cta">
+          <p class="menu__btn__txt">Open App</p>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -242,9 +252,13 @@ export default {
   display: none;
 }
 
+.menu__cta__container {
+  display: none;
+}
+
 @media screen and (max-width: 740px) {
-  #download-btn {
-    display: none;
+  .header__cta__wrapper {
+    grid-template-columns: repeat(3, max-content);
   }
 
   #menu-btn {
@@ -307,6 +321,10 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
+  #download-btn {
+    display: none;
+  }
+
   #open-app-btn {
     display: none;
   }
@@ -316,6 +334,38 @@ export default {
     grid-template-columns: repeat(1, max-content);
     grid-gap: 0;
     gap: 0;
+  }
+
+  .menu__cta__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    gap: 5px;
+    margin-inline: 10px;
+    margin-block: 10px 15px;
+  }
+
+  .menu__cta__btn {
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    border: 1px solid var(--tertiary-col);
+    color: var(--sub-font-col);
+  }
+
+  .menu__cta__btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  #menu-open-cta {
+    background: var(--tertiary-col);
+    color: var(--font-col);
+  }
+
+  .menu__btn__txt {
+    padding-inline: 20px;
   }
 }
 

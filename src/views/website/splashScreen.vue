@@ -124,7 +124,7 @@ export default {
 @media (prefers-color-scheme: dark) {
   .splash__content {
     --wave-w: 400px;
-    --wave-col: #d6d7d9;
+    --wave-col: #f9faff;
   }
 }
 
