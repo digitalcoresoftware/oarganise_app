@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 
 // Views
 import splashScreen from "@/views/website/splashScreen.vue";
-import home from "@/views/website/home.vue";
+import landing from "@/views/website/landing.vue";
+import home from "@/views/app/dashboard/dashboard.vue";
 
 const routes = [
   {
@@ -10,9 +11,18 @@ const routes = [
     component: splashScreen,
   },
   {
+    path: "/landing",
+    name: "landing",
+    component: landing,
+  },
+  {
     path: "/home",
     name: "home",
     component: home,
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: { name: "home" },
   },
 ];
 

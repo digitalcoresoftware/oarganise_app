@@ -6,11 +6,11 @@
       </div>
     </div>
 
-    <div class="header__cta__btn" id="open-app-btn">
+    <a :href="appURL" class="header__cta__btn" id="open-app-btn">
       <div class="cta__wrapper">
         <span class="cta__txt">Open App</span>
       </div>
-    </div>
+    </a>
 
     <button class="header__cta__btn" id="menu-btn" @click="toggleMenu()">
       <div class="cta__wrapper">
@@ -76,13 +76,13 @@
       </div>
 
       <div class="menu__cta__container">
-        <router-link to="" class="menu__cta__btn" id="menu-download-cta">
-          <p class="menu__btn__txt">Download</p>
-        </router-link>
+        <button class="menu__cta__btn" id="menu-download-cta">
+          <span class="menu__btn__txt">Download</span>
+        </button>
 
-        <router-link to="" class="menu__cta__btn" id="menu-open-cta">
+        <a :href="appURL" class="menu__cta__btn" id="menu-open-cta">
           <p class="menu__btn__txt">Open App</p>
-        </router-link>
+        </a>
       </div>
     </div>
   </div>
@@ -188,6 +188,11 @@ export default {
   mounted() {
     // hide menu if screen is small then large
     window.addEventListener("resize", this.hideMenu);
+  },
+  computed: {
+    appURL() {
+      return "http://app.localhost:8080/dashboard";
+    },
   },
 };
 </script>

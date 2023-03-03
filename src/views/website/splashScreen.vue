@@ -47,7 +47,7 @@ export default {
     // Go Home
     const router = useRouter();
     setTimeout(() => {
-      router.push("/home");
+      router.push("/landing");
     }, 4000);
   },
 };

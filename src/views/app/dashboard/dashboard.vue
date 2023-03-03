@@ -1,14 +1,11 @@
 <template>
-  <nav-header />
+  <div>This is the dashboard</div>
 </template>
 
 <script>
-import NavHeader from "@/components/website/home/nav/nav-header.vue";
-
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "home",
-  components: { NavHeader },
+  name: "dashboard",
 };
 </script>
 
