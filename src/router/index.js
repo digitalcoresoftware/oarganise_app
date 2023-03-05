@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import splashScreen from "@/views/website/splashScreen.vue";
 import landing from "@/views/website/landing.vue";
 import home from "@/views/app/dashboard/dashboard.vue";
+import signin from "@/views/app/auth/signin.vue";
 
 const routes = [
   {
@@ -19,6 +20,19 @@ const routes = [
     path: "/home",
     name: "home",
     component: home,
+    beforeEnter: (to, from, next) => {
+      const isAuthenticated = localStorage.getItem("user");
+      if (isAuthenticated) {
+        next();
+      } else {
+        next({ name: "signin" });
+      }
+    },
+  },
+  {
+    path: "/signin",
+    name: "signin",
+    component: signin,
   },
   {
     path: "/:catchAll(.*)",

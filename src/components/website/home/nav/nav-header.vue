@@ -36,10 +36,6 @@ export default {
 
 <style scoped>
 .header__section {
-  /* Vars */
-  --logo-col: #345ea8;
-
-  /* Design */
   display: none;
 }
 
@@ -55,12 +51,6 @@ export default {
 .header__logo {
   height: 20px;
   fill: var(--logo-col);
-}
-
-@media (prefers-color-scheme: dark) {
-  .header__section {
-    --logo-col: #f9faff;
-  }
 }
 
 @media screen and (max-width: 740px) {

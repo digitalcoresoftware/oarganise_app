@@ -191,7 +191,7 @@ export default {
   },
   computed: {
     appURL() {
-      return "http://app.localhost:8080/dashboard";
+      return "http://app.localhost:8080/home";
     },
   },
 };
@@ -362,6 +362,10 @@ export default {
   .menu__cta__btn:hover {
     opacity: 0.7;
     cursor: pointer;
+  }
+
+  #menu-download-cta {
+    background: none;
   }
 
   #menu-open-cta {
