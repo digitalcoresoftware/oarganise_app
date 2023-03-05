@@ -9,6 +9,10 @@
       </div>
 
       <div class="auth__form">
+        <div class="gAuth__test">
+          <p>Is Init: {{ Vue3GoogleOauth2.isInit }}</p>
+        </div>
+
         <button class="form__bar" id="google-sign-in">
           <google-icon class="form__icon" />
           <span class="form__txt">Continue with Google</span>
@@ -38,10 +42,16 @@
 import vhCheck from "vh-check";
 import oarganiseLogo from "@/assets/svgs/logo/oarganise-logo.vue";
 import GoogleIcon from "@/assets/svgs/auth/google-icon.vue";
+import Vue3GoogleOauth2 from "vue3-google-oauth2";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "signin",
+  name: "auth",
+  computed: {
+    Vue3GoogleOauth2() {
+      return Vue3GoogleOauth2;
+    },
+  },
   components: {
     GoogleIcon,
     oarganiseLogo,
@@ -49,6 +59,7 @@ export default {
   mounted() {
     vhCheck();
   },
+  methods: {},
 };
 </script>
 
@@ -94,6 +105,10 @@ export default {
 .auth__form {
   max-width: 400px;
   margin-inline: auto;
+}
+
+.gAuth__test {
+  margin-block: 30px;
 }
 
 .form__bar {

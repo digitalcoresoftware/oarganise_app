@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import splashScreen from "@/views/website/splashScreen.vue";
 import landing from "@/views/website/landing.vue";
 import home from "@/views/app/dashboard/dashboard.vue";
-import signin from "@/views/app/auth/signin.vue";
+import auth from "@/views/app/auth/auth.vue";
 
 const routes = [
   {
@@ -25,15 +25,25 @@ const routes = [
       if (isAuthenticated) {
         next();
       } else {
-        next({ name: "signin" });
+        next({ name: "auth" });
       }
     },
   },
   {
-    path: "/signin",
-    name: "signin",
-    component: signin,
+    path: "/auth",
+    name: "auth",
+    component: auth,
   },
+  // {
+  //   path: "/privacy-policy",
+  //   name: "Privacy Policy",
+  //   component: privacyPolicy,
+  // },
+  // {
+  //   path: "/terms-of-service",
+  //   name: "Terms of service",
+  //   component: termsOfService,
+  // },
   {
     path: "/:catchAll(.*)",
     redirect: { name: "home" },
