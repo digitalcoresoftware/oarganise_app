@@ -191,7 +191,7 @@ export default {
   },
   computed: {
     appURL() {
-      return "http://app.localhost:8080/home";
+      return "http://localhost:8080/home";
     },
   },
 };

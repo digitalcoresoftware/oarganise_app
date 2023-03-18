@@ -5,6 +5,7 @@ import splashScreen from "@/views/website/splashScreen.vue";
 import landing from "@/views/website/landing.vue";
 import home from "@/views/app/dashboard/dashboard.vue";
 import auth from "@/views/app/auth/auth.vue";
+import notFound from "@/views/general/notFound.vue";
 
 const routes = [
   {
@@ -20,14 +21,6 @@ const routes = [
     path: "/home",
     name: "home",
     component: home,
-    beforeEnter: (to, from, next) => {
-      const isAuthenticated = localStorage.getItem("user");
-      if (isAuthenticated) {
-        next();
-      } else {
-        next({ name: "auth" });
-      }
-    },
   },
   {
     path: "/auth",
@@ -46,7 +39,7 @@ const routes = [
   // },
   {
     path: "/:catchAll(.*)",
-    redirect: { name: "home" },
+    component: notFound,
   },
 ];
 
