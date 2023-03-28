@@ -67,6 +67,7 @@ export default {
 .auth__wrapper {
   width: 100%;
   height: 100vh;
+  height: calc(100vh - var(--vh-offset, 0px));
   position: relative;
 }
 
